@@ -1,8 +1,10 @@
 package com.blog.dto;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
-
+import com.blog.entites.Comment;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,5 +29,7 @@ public class PostDto {
 	private CategoryDto category;
 	
 	private UserDto user;
+	
+	private Set<Comment> comments = new HashSet<>();
 
 }
