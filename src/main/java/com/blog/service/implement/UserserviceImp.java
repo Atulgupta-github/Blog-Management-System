@@ -100,5 +100,11 @@ public class UserserviceImp implements UserService {
 		
 		
 	}
+	
+	@Override
+	public UserDto getUserByEmail(String email) {
+	    User user = userRep.findByEmail(email).orElseThrow(() -> new ResourceNotFoundException("User", "email", email));
+	    return this.UserToDto(user);
+	}
 
 }

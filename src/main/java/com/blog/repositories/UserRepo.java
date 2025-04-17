@@ -9,4 +9,6 @@ import com.blog.entites.User;
 public interface UserRepo extends JpaRepository<User, Integer> {
 
 	Optional<User> findByname(String username);
+	
+	Optional<User> findByEmail(String email);
 }
